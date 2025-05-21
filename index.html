@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Notes PWA</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css">
+    <meta name="theme-color" content="#2196f3">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Map Notes</h1>
+            <button id="addNoteBtn">Add Note</button>
+        </header>
+        
+        <div class="main-content">
+            <div id="map"></div>
+            <div class="notes-panel">
+                <h2>Notes in View</h2>
+                <div id="notesList"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Note Modal -->
+    <div id="noteModal" class="modal">
+        <div class="modal-content">
+            <h2>Add New Note</h2>
+            <form id="noteForm">
+                <input type="text" id="noteTitle" placeholder="Note Title" required>
+                <textarea id="noteContent" placeholder="Note Content" required></textarea>
+                <div id="selectedLocation"></div>
+                <div class="button-group">
+                    <button type="submit">Save Note</button>
+                    <button type="button" id="cancelBtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+    <script>
+        // Register service worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(registration => console.log('ServiceWorker registered'))
+                .catch(err => console.log('ServiceWorker registration failed:', err));
+        }
+    </script>
+</body>
+</html> 
