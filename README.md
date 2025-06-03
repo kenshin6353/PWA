@@ -12,7 +12,7 @@ A Progressive Web Application for managing notes with map locations. This applic
 - Offline functionality through PWA
 - Local storage for data persistence
 - Responsive design for mobile and desktop
-
+asdasdasdasdasd
 ## Setup
 
 1. Clone the repository
