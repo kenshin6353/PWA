@@ -17,7 +17,6 @@ A Progressive Web Application for managing notes with map locations. This applic
 
 1. Clone the repository
 2. Serve the application using a local web server. You can use any of these methods:
-   - Python: `python -m http.server 8000`
    - Node.js: `npx serve`
    - VS Code: Use the "Live Server" extension
 
