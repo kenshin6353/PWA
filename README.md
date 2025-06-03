@@ -23,7 +23,7 @@ asdasdasdasdasd
 3. Open the application in your browser at `http://localhost:8000` (or the port provided by your server)
 
 ## Usage
-
+sad;olfkhasdkjfba;kjlsdbafsdkljb
 1. **Viewing Notes**
    - The map shows all notes as markers
    - Click on a marker to view the note details
